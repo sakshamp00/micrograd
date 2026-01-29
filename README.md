@@ -67,7 +67,7 @@ You’ll see:
 
 ---
 
-# 📊 Training Example (XOR)
+## 📊 Training Example (XOR)
 
 XOR dataset:
 
