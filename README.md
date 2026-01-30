@@ -15,7 +15,7 @@ It includes:
 # 📒 Table of Contents
 
 - [Installation](#-installation)
-- [Usage](#%EF%B8%8F-usage)
+- [Usage](#️-usage)
 - [Project Structure](#-project-structure)
 - [Training Example (XOR)](#-training-example-xor)
 - [Contributing](#-contributing)
@@ -56,18 +56,21 @@ You’ll see:
 
 # 📁 Project Structure
 
-```micrograd/
-├── engine.py       # Core autograd Value class
-├── nn.py           # Neuron, Layer, MLP
-├── optim.py        # SGD optimizer
-├── loss.py         # Loss functions (MSE)
-├── train_xor.py    # Training script
-└── README.md       # This file
 ```
+├── micrograd/              # Python module
+│   ├── __init__.py         # Marks as a Python package
+│   ├── engine.py           # Core autograd Value class
+│   ├── nn.py               # Neuron, Layer, MLP classes
+│   ├── optim.py            # SGD optimizer (and later Adam)
+│   └── loss.py             # Loss functions (MSE)
+├── train_xor.py            # Script to train XOR dataset
+├── README.md               # This file
+```
+
 
 ---
 
-## 📊 Training Example (XOR)
+# 📊 Training Example (XOR)
 
 XOR dataset:
 

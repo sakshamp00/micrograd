@@ -1,6 +1,6 @@
 # This file defines a simple neural network framework with Neuron, Layer, and MLP classes.
 import random
-from engine import Value
+from .engine import Value
 
 class Neuron:
     def __init__(self, nin):

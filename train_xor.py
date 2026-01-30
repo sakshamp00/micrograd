@@ -1,7 +1,8 @@
 # This file trains a simple MLP to learn the XOR function using micrograd.
-from nn import MLP
-from optim import SGD
-from loss import MSE
+from micrograd.engine import Value
+from micrograd.nn import Neuron, Layer, MLP
+from micrograd.optim import SGD
+from micrograd.loss import MSE
 import matplotlib.pyplot as plt
 
 # XOR dataset
@@ -16,18 +17,17 @@ ys = [0.0, 1.0, 1.0, 0.0]  # Ground truth values
 model = MLP(2, [16, 16, 1])  # 2 inputs, two hidden layers with 16 neurons each, 1 output
 optimizer = SGD(model.parameters(), lr=0.01)
 
-numsteps = 4000
+numsteps = 302
 lossHistory = []
-for step in range(numsteps):
+for step in range(numsteps+1):
     ypred = [model(x) for x in xs]  # Get model predictions
     loss = MSE(ypred, ys)           # Compute loss
     optimizer.zero_grad()           # Reset gradients
     loss.backward()                 # Backpropagate to compute gradients
     optimizer.step()                # Update model parameters
     lossHistory.append(loss.data)
-    if step % 100 == 0:
+    if step % 100 == 0 or step == numsteps:
         print(f"Step {step}, Loss = {loss.data:.6f}")
-
 print("\nTrained model predictions:")
 for x, y in zip(xs, ys):
     y_pred = model(x).data
