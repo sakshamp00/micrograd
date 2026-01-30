@@ -14,11 +14,11 @@ It includes:
 
 # 📒 Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Training Example (XOR)](#training-example-xor)
-- [Contributing](#contributing)
+- [Installation](#-installation)
+- [Usage](#%EF%B8%8F-usage)
+- [Project Structure](#-project-structure)
+- [Training Example (XOR)](#-training-example-xor)
+- [Contributing](#-contributing)
 
 ---
 
